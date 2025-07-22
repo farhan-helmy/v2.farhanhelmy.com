@@ -10,7 +10,7 @@ export const DATA = {
    description:
     'Open source lover, full stack developer, and a passionate learner. I love to build things.',
    summary:
-    'Creator of [carisurau.com](https://carisurau.com), [tempahjer.com](https://tempahjer.com) and [others](https://farhanhelmy.com/projects). \n\n'
+    'Freelance Full Stack Developer specializing in automation and web applications. Creator of [carisurau.com](https://carisurau.com), [tempahjer.com](https://tempahjer.com) and [others](https://farhanhelmy.com/projects). \n\n'
     + 'I am ex-Amazonian, I used to work at AWS as a Solutions Architect.\n\n'
     + 'Let\'s connect and grow the tech community in Malaysia!\n\n',
    avatarUrl: '/farhan.png',
@@ -81,7 +81,7 @@ export const DATA = {
          title: 'Software Engineer',
          logoUrl: '/seek.png',
          start: 'Aug 2023',
-         end: 'Current',
+         end: 'Oct 2024',
          description:
         'Develop and maintain Jira and Confluence plugins.',
       },
@@ -121,6 +121,29 @@ export const DATA = {
       },
    ],
    projects: [
+      {
+         title: 'StudentQR Badge Automation',
+         href: '#',
+         dates: 'Nov 2024 - Present',
+         active: true,
+         description:
+        'Automated badge and nametag design system for StudentQR, reducing manual design time by 80%. Built a complete automation pipeline that generates custom student badges and nametags, streamlining the production process for their customers.',
+         technologies: [
+            'React',
+            'Node.js',
+            'Puppeteer',
+            'Automation',
+         ],
+         links: [
+            {
+               type: 'Client',
+               href: '#',
+               icon: '',
+            },
+         ],
+         image: '/studentqr-placeholder.png',
+         video: '',
+      },
       {
          title: 'CariSurau',
          href: 'https://carisurau.com',
@@ -167,6 +190,14 @@ export const DATA = {
          ],
          image: '/farhan.png',
          video: '',
+      },
+   ],
+   trustedBy: [
+      {
+         name: 'StudentQR',
+         description: 'Badge automation system',
+         logoUrl: '/studentqr-logo.png',
+         href: '#',
       },
    ],
 } as const

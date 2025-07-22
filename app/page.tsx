@@ -111,9 +111,33 @@ export default function Page() {
                </div>
             </div>
          </section>
+         <section id="trusted-by">
+            <div className="flex min-h-0 flex-col gap-y-3">
+               <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+                  <h2 className="text-xl font-bold">Trusted By</h2>
+               </BlurFade>
+               <div className="flex flex-wrap gap-4">
+                  {DATA.trustedBy.map((client, id) => (
+                     <BlurFade key={client.name} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
+                        <div className="flex items-center gap-2 rounded-lg border p-3">
+                           <img
+                              src={client.logoUrl}
+                              alt={client.name}
+                              className="size-8 rounded"
+                           />
+                           <div>
+                              <p className="font-medium">{client.name}</p>
+                              <p className="text-xs text-muted-foreground">{client.description}</p>
+                           </div>
+                        </div>
+                     </BlurFade>
+                  ))}
+               </div>
+            </div>
+         </section>
          <section id="projects">
             <div className="w-full space-y-12 py-12">
-               <BlurFade delay={BLUR_FADE_DELAY * 11}>
+               <BlurFade delay={BLUR_FADE_DELAY * 12}>
                   <div className="flex flex-col items-center justify-center space-y-4 text-center">
                      <div className="space-y-2">
                         <div className="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
@@ -134,7 +158,7 @@ export default function Page() {
                   {DATA.projects.map((project, id) => (
                      <BlurFade
                         key={project.title}
-                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                        delay={BLUR_FADE_DELAY * 13 + id * 0.05}
                      >
                         <ProjectCard
                            href={project.href}
@@ -154,7 +178,7 @@ export default function Page() {
          </section>
          <section id="contact">
             <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
-               <BlurFade delay={BLUR_FADE_DELAY * 16}>
+               <BlurFade delay={BLUR_FADE_DELAY * 17}>
                   <div className="space-y-3">
                      <div className="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
                         Contact
